@@ -1294,7 +1294,7 @@ body {
 }
 
 .foot {
-  background-color: var(--color-grey-dark-4);
+  background-color: var(--color-grey-dark-1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
