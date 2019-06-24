@@ -1,21 +1,22 @@
-.atention {
-  &__link {
-    &,
-    &:link,
-    &:visited {
-      color: var(--color-grey-dark-1);
-      background-color: var(--color-grey-light-1);
-      text-decoration: none;
-      //text-transform: uppercase;
-      //display: inline-block;
-      transition: all 0.3s;
-    }
+@include respond(desktop) {
+  .atention {
+    &__link {
+      &,
+      &:link,
+      &:visited {
+        color: var(--color-grey-dark-1) !important;
+        background-color: var(--color-grey-light-1) !important;
+        //text-transform: uppercase;
+        //display: inline-block;
+        transition: all 0.3s !important;
+      }
 
-    &:hover,
-    &:active {
-      color: var(--color-primary-dark) !important;
-      box-shadow: var(--shadow-dark);
-      transform: rotate(5deg) scale(1.3);
+      &:hover,
+      &:active {
+        color: var(--color-primary-dark) !important;
+        box-shadow: var(--shadow-dark) !important;
+        transform: rotate(5deg) scale(1.3) !important;
+      }
     }
   }
 }
