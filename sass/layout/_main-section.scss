@@ -1,0 +1,58 @@
+//?  MAPS
+
+.campus {
+  &__container {
+    display: grid;
+  }
+  &__map-box {
+    justify-self: center;
+    height: 80vw;
+    width: 90vw;
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  &__text-box {
+    margin: 5rem;
+    p {
+      padding-top: 3rem;
+    }
+    h2 {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@include respond(desktop) {
+  .campus {
+    &__map-box {
+      justify-self: center;
+      height: 40vw;
+      width: 50vw;
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+//?  CARDS
+
+@include respond(desktop) {
+  .courses-title {
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  .courses-container {
+    display: grid;
+    grid-template-columns: repeat(3, 35rem);
+    grid-template-rows: min-content;
+    justify-items: center;
+    grid-column-gap: 3rem;
+  }
+}

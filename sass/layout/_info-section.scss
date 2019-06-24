@@ -1,0 +1,47 @@
+.campus {
+  &__address-box {
+    margin: 4rem;
+  }
+  &__mailLink {
+    &:link,
+    &:visited {
+      color: inherit;
+      text-decoration: none;
+      font-size: 2rem;
+      //display: block;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      span {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &__phoneInfo {
+    color: inherit;
+    text-decoration: none;
+    font-size: 2rem;
+    //display: block
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@include respond(desktop) {
+  .campus {
+    &__address-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      //outline: 3rem solid var(--color-primary-light);
+    }
+  }
+}

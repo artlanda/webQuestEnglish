@@ -1,0 +1,35 @@
+.escuelas-container {
+  // ? SE DEFINE EL LAYOUT PARA HOME PAGE EN MOVIL APPROCH
+  display: grid; //   ?    modo grid
+  grid-template-columns: 100vw; //   ?    modo grid
+}
+
+// ? SE DEFINE EL LAYOUT PARA ESCUELAS PAGE EN DESKTOP
+@include respond(desktop) {
+  .escuelas-container {
+    background-color: var(--color-grey-light-3);
+    grid-template-columns: 1fr repeat(6, minmax(min-content, 15vw)) 1fr;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas:
+      "topbar topbar topbar topbar topbar topbar topbar topbar"
+      "...... main   main   main   main   info   info ......"
+      "footer footer footer footer footer footer footer footer ";
+
+    .topbar {
+      grid-area: topbar;
+    }
+    .info-section {
+      grid-area: info;
+    }
+    .main-section {
+      grid-area: main;
+    }
+    .footer {
+      grid-area: footer;
+    }
+
+    & > .navigation {
+      //margin: auto;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// BASIC DEFINITIONS OF THE PROJECT
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /*best practice y poner en el body border-box*/
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 43.75%; // PHONE    1rem=7px
+
+  @include respond(bigPhone) {
+    // width > 400
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(tablet) {
+    // width > 750
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(desktop) {
+    // width > 1000
+    font-size: 62.5%; //1 rem = 10px, 10/16 = 62.5%
+  }
+
+  @include respond(bigDesktop) {
+    // width > 1350
+    font-size: 68.75%; //1 rem = 11px, 11/16 = 68.75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+  /*background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );*/
+}

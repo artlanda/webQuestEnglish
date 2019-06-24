@@ -1,0 +1,172 @@
+.chat__btn {
+  position: relative;
+  height: 9.5rem;
+  width: 9.5rem;
+  border-radius: 50%;
+  background-color: transparent; //var(--color-grey-light-4);
+  margin: 0.5rem 0;
+
+  &--icon {
+    position: absolute;
+    width: 6.5rem;
+    height: 6.5rem;
+    fill: currentColor;
+    @include centerHorVer;
+  }
+
+  &--face {
+    &,
+    &:link,
+    &:visited {
+      transform: scale(0, 0);
+      transform-origin: center;
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+  &--whats {
+    &,
+    &:link,
+    &:visited {
+      transform: scale(0, 0);
+      transform-origin: center;
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+}
+// ?  FUNCIONAMIENTO
+.chat__checkbox:checked ~ .chat__btn--face,
+.chat__checkbox:checked ~ .chat__btn--whats {
+  transform: scale(1, 1);
+}
+
+.btn--animated {
+  &,
+  &:link,
+  &:visited {
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: var(--shadow-dark);
+
+    &::after {
+      /*when we hover the botton THEN we want certain style for the pseudo elemen */
+      transform: scaleX(1.6) scaleY(1.6);
+      opacity: 0; /*desaparecer elemento (invisible)*/
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(0.1rem);
+    box-shadow: var(--shadow-dark);
+  }
+  &::after {
+    content: ""; /*always specify content*/
+    display: inline-block; /*cause btn is inline block by definition*/
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    z-index: -1; /*define posisicones de los elementos uno arriba de otro -1 es atras */
+    transition: all 0.5s; /*initial state*/
+    background-color: transparent; //var(--color-grey-light-4);
+  }
+}
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: var(--default-font-size);
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: var(--color-grey-dark-4);
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--blue {
+    background-color: var(--color-primary);
+    color: var(--color-grey-light-1);
+
+    &::after {
+      background-color: var(--color-primary);
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+}
+
+// !   ---------------------------------  ------------- -------------------------------
+// !   ---------------------------------  MEDIA QUERY -------------------------------
+// !   ---------------------------------  ------------- -------------------------------
+
+@include respond(tablet) {
+  .chat__btn {
+    height: 11rem;
+    width: 11rem;
+
+    &--icon {
+      width: 7.5rem;
+      height: 7.5rem;
+    }
+  }
+}
+
+@include respond(desktop) {
+  .chat__btn {
+    height: 8.5rem;
+    width: 8.5rem;
+
+    &--icon {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}

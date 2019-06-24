@@ -1,0 +1,20 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--color-primary-dark);
+  z-index: 2000;
+  position: fixed;
+  bottom: 1vh;
+  right: 2vw;
+
+  &__checkbox {
+    display: none;
+  }
+}
+
+@include respond(desktop) {
+  .chat {
+    left: 1vw;
+  }
+}

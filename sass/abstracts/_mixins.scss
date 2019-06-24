@@ -1,0 +1,58 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table; // standar version od the clear
+    clear: both; //  clear both floats left an right
+  }
+}
+
+@mixin centerHorVer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// ! MEDIA QUERY MANAGER
+/*
+[ 0 -  400 ]       phone     NORMAL style
+400 - 750px:    bigPhone 
+750 - 1000px:    tablet
+1000 - 1250px   :  desktop   includes ipad pro ipad landscape     AQUI HAY CAMBIO DE LAYOUT
+1250 - ....  :   bigDesktop
+
+
+$breakpoint arguement choices:
+[ - phone ]
+- bigPhone
+- tablet
+- desktop
+- bigDesktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == bigPhone {
+    @media only screen and (min-width: 25em) {
+      @content;
+    } //400px
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 46.87em) {
+      @content;
+    } //750px
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 62.5em) {
+      @content;
+    } //1000px
+  }
+  @if $breakpoint == bigDesktop {
+    @media only screen and (min-width: 84.38em) {
+      @content;
+    } //1350px
+  }
+}

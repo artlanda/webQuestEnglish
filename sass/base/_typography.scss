@@ -1,0 +1,80 @@
+body {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-dark-1);
+}
+
+.heading-primary {
+  color: var(--color-primary-dark);
+  backface-visibility: hidden;
+  &--main {
+    //display: block;
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: 1.1rem;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  &--sub {
+    //display: block;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 1rem;
+    animation: moveInRight 1s ease-out;
+  }
+}
+
+.heading-secondary {
+  color: var(--color-primary-dark);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  //display: inline-block; // para que el elemento NO ocupe todo el width del tamaño del bloque
+  // transparente el texto para que se vea el gradiente
+  letter-spacing: 0.4rem;
+}
+
+.description-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  color: var(--font-primary);
+  letter-spacing: 0.2rem;
+}
+
+.heading-tertiary {
+  color: var(--color-primary);
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+@include respond(desktop) {
+  .heading-secondary--animated {
+    color: var(--color-primary-dark);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    //display: inline-block; // para que el elemento NO ocupe todo el width del tamaño del bloque
+    // transparente el texto para que se vea el gradiente
+    letter-spacing: 0.4rem;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.2s;
+    &:hover {
+      transform: skewY(2deg) skewX(15deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+    }
+  }
+}

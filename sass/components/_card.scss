@@ -1,0 +1,193 @@
+@include respond(desktop) {
+  .card {
+    -moz-perspective: 150rem;
+    perspective: 150rem;
+    height: 56rem;
+    width: 90%;
+
+    position: relative; //?   === 1
+
+    &__side {
+      height: 100%;
+      width: 100%;
+      transition: transform 0.8s ease;
+
+      position: absolute; //?   === 1  ====   //!
+      top: 0; //!
+      left: 0; //!
+      backface-visibility: hidden; //!
+      border-radius: 3px;
+      box-shadow: var(--shadow-dark);
+      overflow: hidden;
+
+      &--front {
+      }
+      &--back {
+        &-1 {
+          //background-color: green;
+        }
+
+        transform: rotateY(180deg); //!
+        //transform: rotateY(0);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(-180deg); //!
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0); //!
+    }
+    &:hover &__side--back &__video-box {
+      transition: opacity 0.1s ease-in-out 0.3s; //!
+      opacity: 1; //!
+    }
+
+    &__video-box {
+      height: 100%;
+      width: 100%;
+      opacity: 0; //!    0
+      transition: opacity 0.1s ease-in-out 0.3s;
+      z-index: -1;
+      position: relative; //?   === 2  ====
+    }
+
+    &__video {
+      margin: 0;
+      padding: 0;
+      height: 31.5rem;
+      transform: rotateZ(90deg);
+      position: absolute; //?   === 2  ====
+      bottom: 12.3rem;
+      left: -12.2rem;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    &__picture {
+      height: 20rem;
+      width: 100%;
+      background-blend-mode: color;
+      background-repeat: no-repeat;
+      background-size: contain;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 77%, 0 82%);
+      clip-path: polygon(0 0, 100% 0, 100% 77%, 0 82%);
+
+      &--1 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.9),
+            rgba($color-primary-dark, 0.6)
+          ),
+          url(../img/web2adol.jpg);
+      }
+      &--2 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary-light, 0.9),
+            rgba($color-secondary-dark, 0.6)
+          ),
+          url(../img/web6ninos.jpg);
+      }
+      &--3 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-tertiary-light, 0.9),
+            rgba($color-tertiary-dark, 0.6)
+          ),
+          url(../img/web3.jpg);
+      }
+    }
+
+    &__heading {
+      font-size: 2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: right;
+      position: absolute;
+      top: 18rem;
+      right: 1rem;
+      color: white;
+    }
+
+    &__heading-span {
+      padding: 0.35rem 1.5rem;
+      box-decoration-break: clone;
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, 0.6),
+          rgba($color-primary-dark, 0.8)
+        );
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-secondary-light, 0.6),
+          rgba($color-secondary-dark, 0.8)
+        );
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-light, 0.6),
+          rgba($color-tertiary-dark, 0.8)
+        );
+      }
+    }
+
+    &__details {
+      padding: 8rem 4rem 4rem 4rem;
+      ul {
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;
+
+        li {
+          text-align: center;
+          font-size: 1.6rem;
+          padding: 1.4rem;
+          font-weight: 500;
+
+          &:not(:last-child) {
+            border-bottom: var(--line2);
+          }
+        }
+      }
+    }
+
+    // BACK SIDE styling
+    &__cta {
+      @include centerHorVer;
+      text-align: center;
+    }
+
+    &__price-box {
+      width: 31.5rem;
+      background-image: linear-gradient(
+        to top,
+        rgba($color-grey-dark-4, 0.9),
+        rgba($color-grey-dark-4, 0.1)
+      );
+
+      margin-top: 15rem;
+      color: white;
+      font-weight: 300;
+    }
+
+    &__price-since {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    &__price-value {
+      font-size: 4rem;
+    }
+    &__btn {
+      margin-top: 10rem;
+    }
+  }
+}

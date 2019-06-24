@@ -1,0 +1,37 @@
+.headMainPage {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  &__video {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+
+  &__text-box {
+    grid-column: 3 / 7;
+    grid-row: 2 / 5;
+  }
+
+  &__text {
+    display: grid;
+    //flex-direction: column;
+    margin: auto;
+    height: 100%;
+    align-items: center;
+    //justify-items: center;
+    //align-items: center;
+    //text-align: center;
+  }
+}
+
+@include respond(desktop) {
+  .headMainPage {
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(10, 1fr);
+
+    &__text-box {
+      grid-column: 4 / 8;
+      grid-row: 3 / 6;
+    }
+  }
+}
