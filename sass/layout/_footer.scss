@@ -38,5 +38,42 @@
       flex: 1;
       margin: 2rem 1rem 2rem 1rem;
     }
+
+    &__navigation {
+      border-top: var(--line);
+      padding-top: 2rem;
+      display: inline-block;
+    }
+
+    &__list {
+      list-style: none;
+    }
+
+    &__item {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+
+    &__link {
+      &:link,
+      &:visited {
+        color: var(--color-grey-light-2);
+        background-color: var(--color-grey-dark-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        transition: all 0.2s;
+      }
+
+      &:hover,
+      &:active {
+        color: var(--color-grey-light-4);
+        box-shadow: var(--shadow-dark);
+        transform: rotate(5deg) scale(1.3);
+      }
+    }
   }
 }

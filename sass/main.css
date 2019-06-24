@@ -402,6 +402,7 @@ body {
   .atention__link, .atention__link:link, .atention__link:visited {
     color: var(--color-grey-dark-1) !important;
     background-color: var(--color-grey-light-1) !important;
+    display: inline-block;
     -webkit-transition: all 0.3s !important;
     transition: all 0.3s !important;
   }
@@ -788,12 +789,6 @@ body {
 
 .chat__checkbox {
   display: none;
-}
-
-@media only screen and (min-width: 62.5em) {
-  .chat {
-    left: 1vw;
-  }
 }
 
 .navigation__barContainer {
@@ -1347,6 +1342,36 @@ body {
         -ms-flex: 1;
             flex: 1;
     margin: 2rem 1rem 2rem 1rem;
+  }
+  .foot__navigation {
+    border-top: var(--line);
+    padding-top: 2rem;
+    display: inline-block;
+  }
+  .foot__list {
+    list-style: none;
+  }
+  .foot__item {
+    display: inline-block;
+  }
+  .foot__item:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+  .foot__link:link, .foot__link:visited {
+    color: var(--color-grey-light-2);
+    background-color: var(--color-grey-dark-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .foot__link:hover, .foot__link:active {
+    color: var(--color-grey-light-4);
+    -webkit-box-shadow: var(--shadow-dark);
+            box-shadow: var(--shadow-dark);
+    -webkit-transform: rotate(5deg) scale(1.3);
+            transform: rotate(5deg) scale(1.3);
   }
 }
 /*# sourceMappingURL=main.css.map */
