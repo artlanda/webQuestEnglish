@@ -757,6 +757,7 @@ body {
   color: var(--color-grey-dark-1);
   background-color: var(--color-grey-light-1);
   text-decoration: none;
+  text-transform: uppercase;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
