@@ -1419,8 +1419,8 @@ body {
   .foot__link--twitter:hover, .foot__link--twitter:active {
     color: var(--color-twitter);
   }
-  .foot__link--rss:hover, .foot__link--rss:active {
-    color: white;
+  .foot__link--youtube:hover, .foot__link--youtube:active {
+    color: #c40303;
   }
   .foot__link-2:link, .foot__link-2:visited {
     font-size: 1.3rem;
