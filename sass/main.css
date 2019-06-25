@@ -57,6 +57,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   fill: currentColor;
 }
 
+.mainPage-icon-2 {
+  height: 5.3rem;
+  width: 7rem;
+  fill: currentColor;
+}
+
 .secondaryPage-icon {
   height: 3rem;
   width: 3rem;

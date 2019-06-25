@@ -1,0 +1,61 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M1044.448 561.952c0 0-146.944-149.824-349.44-149.824-197.856 0-393.44 149.824-393.44 149.824l-109.856-45.856v134.528c17.312 5.888 29.984 21.824 29.984 41.12 0 19.488-12.928 35.456-30.496 41.216l32.48 90.592-95.872 0 32.768-91.36c-15.744-6.688-26.752-22.24-26.752-40.448 0-17.824 10.688-32.992 25.952-39.904v-149.088l-159.776-66.624 703.008-315.552 644.992 319.52-303.552 121.856zM687.008 488.032c203.712 0 303.552 107.84 303.552 107.84v223.68c0 0-103.84 83.872-319.52 83.872s-287.584-83.872-287.584-83.872v-223.68c-0 0 99.84-107.84 303.552-107.84zM683.008 855.488c141.184 0 255.648-28.64 255.648-63.904s-114.464-63.904-255.648-63.904-255.616 28.64-255.616 63.904 114.432 63.904 255.616 63.904z"
+        ],
+        "width": 1348,
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "graduate",
+          "hat"
+        ],
+        "grid": 32
+      },
+      "attrs": [],
+      "properties": {
+        "id": 126,
+        "order": 2,
+        "prevSize": 32,
+        "name": "graduate"
+      },
+      "setIdx": 0,
+      "setId": 1,
+      "iconIdx": 125
+    }
+  ],
+  "height": 1024,
+  "preferences": {
+    "showGlyphs": true,
+    "showCodes": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {},
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      }
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": false,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "name": "cursos",
+      "classSelector": ".icon",
+      "height": 32,
+      "columns": 16,
+      "margin": 16
+    },
+    "historySize": 50
+  }
+}
