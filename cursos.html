@@ -4,7 +4,143 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <link rel="stylesheet" href="sass/main.css" />
+    <link rel="shortcut icon" type="image/png " href="img/logo_small.png" />
+    <title>Cursos</title>
   </head>
-  <body></body>
+  <body>
+    <div class="cursos-container">
+      <section class="topbar navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+        <div class="navigation__barContainer">
+          <label for="navi-toggle" class="navigation__button--1">
+            <span class="navigation__icon--1">Menu</span>
+          </label>
+          <div class="navigation__logoBox">
+            <img
+              src="img/logo_small.png"
+              alt="quest logo"
+              class="navigation__logo"
+            />
+          </div>
+          <label for="navi-toggle" class="navigation__button--2">
+            <span class="navigation__icon--2">&nbsp;</span>
+          </label>
+        </div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="index.html" class="navigation__link">
+                <svg class="navigation__iconLink u-displayIcon">
+                  <use xlink:href="img/symbol-defs.svg#icon-home3"></use>
+                </svg>
+                <span class="navigation__homeText">Home</span></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="cursos.html" class="navigation__link">
+                <svg class="navigation__iconLink">
+                  <use xlink:href="img/symbol-defs.svg#icon-images"></use>
+                </svg>
+                <span>Cursos</span></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <svg class="navigation__iconLink">
+                  <use xlink:href="img/symbol-defs.svg#icon-headphones"></use>
+                </svg>
+                <span>Maestros</span></a
+              >
+            </li>
+
+            <li class="navigation__item">
+              <a href="escuelas.html" class="navigation__link">
+                <svg class="navigation__iconLink">
+                  <use
+                    xlink:href="img/symbol-defs.svg#icon-folder-download"
+                  ></use>
+                </svg>
+                <span>Escuelas</span></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <svg class="navigation__iconLink">
+                  <use xlink:href="img/symbol-defs.svg#icon-music"></use>
+                </svg>
+                <span>Promociones</span></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <svg class="navigation__iconLink">
+                  <use xlink:href="img/symbol-defs.svg#icon-images"></use>
+                </svg>
+                <span>Contacto</span></a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <svg class="navigation__iconLink">
+                  <use xlink:href="img/symbol-defs.svg#icon-headphones"></use>
+                </svg>
+                <span>Materiales</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <footer class="footer foot">
+        <div class="foot__disclaimer--1">
+          <div class="foot__navigation">
+            <ul class="foot__list">
+              <li class="foot__item">
+                <p class="foot__title">Síguenos en:</p>
+              </li>
+              <li class="foot__item">
+                <a
+                  href="https://www.facebook.com/QuestEnglishSC/"
+                  class="foot__link foot__link--face"
+                  ><svg class="secondaryPage-icon">
+                    <use
+                      xlink:href="img/symbol-defs.svg#icon-facebook2"
+                    ></use></svg
+                  ><span>Facebook</span></a
+                >
+              </li>
+              <li class="foot__item">
+                <a href="#" class="foot__link foot__link--twitter"
+                  ><svg class="secondaryPage-icon">
+                    <use
+                      xlink:href="img/symbol-defs.svg#icon-twitter2"
+                    ></use></svg
+                  ><span>Twitter</span></a
+                >
+              </li>
+              <li class="foot__item">
+                <a href="#" class="foot__link foot__link--youtube"
+                  ><svg class="secondaryPage-icon">
+                    <use
+                      xlink:href="img/symbol-defs.svg#icon-youtube2"
+                    ></use></svg
+                  ><span>Youtube</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot__disclaimer--2">
+          <p class="foot__copyright">
+            Propiedad de
+            <a href="index.html" class="foot__link-2">Quest English</a>
+            Servicios de educación. &copy; 2019 Quest English todos lo derechos
+            reservados.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

@@ -400,6 +400,50 @@ body {
   }
 }
 
+.cursos-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100vw;
+      grid-template-columns: 100vw;
+}
+
+@media only screen and (min-width: 62.5em) {
+  .cursos-container {
+    background-color: var(--color-grey-light-3);
+    -ms-grid-columns: 1fr (minmax(min-content, 15vw))[6] 1fr;
+        grid-template-columns: 1fr repeat(6, minmax(-webkit-min-content, 15vw)) 1fr;
+        grid-template-columns: 1fr repeat(6, minmax(min-content, 15vw)) 1fr;
+    -ms-grid-rows: min-content min-content 30vh;
+        grid-template-rows: -webkit-min-content -webkit-min-content 30vh;
+        grid-template-rows: min-content min-content 30vh;
+        grid-template-areas: "topbar topbar topbar topbar topbar topbar topbar topbar" "...... main   main   main   main   info   info ......" "footer footer footer footer footer footer footer footer ";
+  }
+  .cursos-container .topbar {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-area: topbar;
+  }
+  .cursos-container .info-section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 2;
+    grid-area: info;
+  }
+  .cursos-container .main-section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-area: main;
+  }
+  .cursos-container .footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-area: footer;
+  }
+}
+
 @media only screen and (min-width: 62.5em) {
   .atention__link, .atention__link:link, .atention__link:visited {
     color: var(--color-grey-dark-1) !important;
