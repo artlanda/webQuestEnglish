@@ -308,9 +308,9 @@ body {
     -ms-grid-columns: 1fr (minmax(min-content, 15vw))[6] 1fr;
         grid-template-columns: 1fr repeat(6, minmax(-webkit-min-content, 15vw)) 1fr;
         grid-template-columns: 1fr repeat(6, minmax(min-content, 15vw)) 1fr;
-    -ms-grid-rows: (min-content)[4];
-        grid-template-rows: repeat(4, -webkit-min-content);
-        grid-template-rows: repeat(4, min-content);
+    -ms-grid-rows: (min-content)[4] 30vh;
+        grid-template-rows: repeat(4, -webkit-min-content) 30vh;
+        grid-template-rows: repeat(4, min-content) 30vh;
         grid-template-areas: "topbar topbar topbar topbar topbar topbar topbar topbar" "header header header header header header header header" "....    main   main   main   main   main   main    ...." "....    info   info   info   info   info   info    ...." "footer footer footer footer footer footer footer footer ";
   }
   .home-container .topbar {
@@ -369,9 +369,9 @@ body {
     -ms-grid-columns: 1fr (minmax(min-content, 15vw))[6] 1fr;
         grid-template-columns: 1fr repeat(6, minmax(-webkit-min-content, 15vw)) 1fr;
         grid-template-columns: 1fr repeat(6, minmax(min-content, 15vw)) 1fr;
-    -ms-grid-rows: min-content min-content min-content;
-        grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
-        grid-template-rows: min-content min-content min-content;
+    -ms-grid-rows: min-content min-content 30vh;
+        grid-template-rows: -webkit-min-content -webkit-min-content 30vh;
+        grid-template-rows: min-content min-content 30vh;
         grid-template-areas: "topbar topbar topbar topbar topbar topbar topbar topbar" "...... main   main   main   main   info   info ......" "footer footer footer footer footer footer footer footer ";
   }
   .escuelas-container .topbar {
