@@ -41,18 +41,47 @@
 
 //?  CARDS
 
+.courses-container {
+  all: unset;
+  display: grid;
+  grid-template-columns: repeat(3, 35rem);
+  grid-template-rows: min-content;
+  justify-items: center;
+  grid-column-gap: 3rem;
+
+  @media only screen and (max-width: 62.5em), only screen and (hover: none) {
+    all: unset;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(3, 85rem);
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 3rem;
+  }
+}
+
+/*.courses-container {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: repeat(3, 85rem);
+  justify-items: center;
+  align-items: center;
+  grid-row-gap: 3rem;
+}
+
 @include respond(desktop) {
-  .courses-title {
+ .courses-title {
     margin: 0 auto;
     text-align: center;
     padding: 3rem 0;
   }
 
   .courses-container {
+    all: unset;
     display: grid;
     grid-template-columns: repeat(3, 35rem);
     grid-template-rows: min-content;
     justify-items: center;
     grid-column-gap: 3rem;
   }
-}
+}*/
