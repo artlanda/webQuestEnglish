@@ -8,12 +8,14 @@
   --color-grey-light-3: #f0eeee;
   --color-grey-light-4: #ccc;
   --color-grey-light-5: #f7f7f7;
+  --color-grey-light-6: #e4dbd6;
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --color-grey-dark-4: rgb(77, 76, 76);
   --color-face: rgb(106, 128, 201);
   --color-twitter: rgb(49, 224, 255);
+  --color-grey-light-1: #f9f7f6;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   --line: 1px solid var(--color-grey-light-2);
@@ -443,6 +445,49 @@ body {
     grid-area: main;
   }
   .cursos-container .footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-area: footer;
+  }
+}
+
+.maestros-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100vw;
+      grid-template-columns: 100vw;
+}
+
+@media only screen and (min-width: 62.5em) {
+  .maestros-container {
+    background-color: var(--color-grey-light-3);
+    -ms-grid-columns: 1fr (minmax(min-content, 15vw))[6] 1fr;
+        grid-template-columns: 1fr repeat(6, minmax(-webkit-min-content, 15vw)) 1fr;
+        grid-template-columns: 1fr repeat(6, minmax(min-content, 15vw)) 1fr;
+    -ms-grid-rows: min-content min-content 30vh;
+        grid-template-rows: -webkit-min-content -webkit-min-content 30vh;
+        grid-template-rows: min-content min-content 30vh;
+        grid-template-areas: "topbar topbar topbar topbar topbar topbar topbar topbar" "...... main   main   main   main   main   info ......" "footer footer footer footer footer footer footer footer ";
+  }
+  .maestros-container .topbar {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-area: topbar;
+  }
+  .maestros-container .info-section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 7;
+    grid-area: info;
+  }
+  .maestros-container .main-section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 5;
+    grid-area: main;
+  }
+  .maestros-container .footer {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 8;
@@ -1443,6 +1488,104 @@ body {
     grid-column-gap: 3rem;
   }
 }*/
+.teachers__container {
+  margin: 15rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+}
+
+@media only screen and (min-width: 62.5em) {
+  .teachers__container {
+    grid-column: center-start / center-end;
+  }
+}
+
+.teacher {
+  background-color: var(--color-grey-light-6);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3.5rem;
+}
+
+.teacher__img {
+  width: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  z-index: 1;
+}
+
+.teacher__like {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  fill: var(--color-primary);
+  height: 2.5rem;
+  width: 2.5rem;
+  z-index: 2;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin: 1rem;
+}
+
+.teacher__name {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  z-index: 3;
+  width: 80%;
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1.25rem;
+  background-color: var(--color-primary-light);
+  color: #fff;
+  font-weight: 400;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.teacher__location, .teacher__rooms {
+  margin-top: 2.5rem;
+}
+
+.teacher__location, .teacher__rooms, .teacher__area, .teacher__price {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.teacher__location svg, .teacher__rooms svg, .teacher__area svg, .teacher__price svg {
+  fill: var(--color-primary);
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.teacher__btn {
+  grid-column: 1 / -1;
+}
+
 .campus__address-box {
   margin: 4rem;
 }
