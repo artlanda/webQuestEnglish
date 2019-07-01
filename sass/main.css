@@ -1507,7 +1507,7 @@ body {
   }
 }*/
 .teachers__container {
-  margin: 15rem 0;
+  margin: 5rem 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
