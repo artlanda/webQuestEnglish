@@ -1699,6 +1699,11 @@ body {
           transform: translateY(-40%);
 }
 
+.clases--link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .campus__address-box {
   margin: 4rem;
 }
