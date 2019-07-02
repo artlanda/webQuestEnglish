@@ -188,6 +188,13 @@
   //align-items: center;
   &--title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 3rem 0;
   }
+}
+
+.clases--item {
+  text-decoration: none;
+  list-style: none;
 }
