@@ -170,3 +170,24 @@
     grid-column: 1 / -1;
   }
 }
+
+//?  CURSOS
+
+.clases-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 6rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.clasesflex-container {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  //align-items: center;
+  &--title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}

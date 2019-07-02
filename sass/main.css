@@ -424,7 +424,7 @@ body {
     -ms-grid-rows: min-content min-content 30vh;
         grid-template-rows: -webkit-min-content -webkit-min-content 30vh;
         grid-template-rows: min-content min-content 30vh;
-        grid-template-areas: "topbar topbar topbar topbar topbar topbar topbar topbar" "...... main   main   main   main   info   info ......" "footer footer footer footer footer footer footer footer ";
+        grid-template-areas: "topbar topbar topbar topbar topbar topbar topbar topbar" "...... main   main   main   main   main   info ......" "footer footer footer footer footer footer footer footer ";
   }
   .cursos-container .topbar {
     -ms-grid-row: 1;
@@ -434,14 +434,13 @@ body {
   }
   .cursos-container .info-section {
     -ms-grid-row: 2;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 2;
+    -ms-grid-column: 7;
     grid-area: info;
   }
   .cursos-container .main-section {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 5;
     grid-area: main;
   }
   .cursos-container .footer {
@@ -1602,6 +1601,31 @@ body {
 
 .teacher__btn {
   grid-column: 1 / -1;
+}
+
+.clases-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 6rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.clasesflex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.clasesflex-container--title {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .campus__address-box {
