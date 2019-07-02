@@ -186,6 +186,25 @@ body {
             transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
   }
+  .heading-tertiary--animated {
+    color: var(--color-primary-dark);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    display: inline-block;
+    background-image: -webkit-gradient(linear, left top, right top, from(#c40303), to(#920101));
+    background-image: linear-gradient(to right, #c40303, #920101);
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .heading-tertiary--animated:hover {
+    -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+            transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
 }
 
 *,
@@ -424,7 +443,7 @@ body {
     -ms-grid-rows: min-content min-content 30vh;
         grid-template-rows: -webkit-min-content -webkit-min-content 30vh;
         grid-template-rows: min-content min-content 30vh;
-        grid-template-areas: "topbar topbar topbar topbar topbar topbar topbar topbar" "...... main   main   main   main   main   info ......" "footer footer footer footer footer footer footer footer ";
+        grid-template-areas: "topbar topbar topbar topbar topbar topbar topbar topbar" "......  main  main   main   main   main   info  ......" "footer footer footer footer footer footer footer footer ";
   }
   .cursos-container .topbar {
     -ms-grid-row: 1;
@@ -1604,11 +1623,15 @@ body {
 }
 
 .clases-container {
+  /*@include respond(desktop) {
+    grid-column: center-start / center-end;
+  }*/
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  grid-gap: 6rem;
+  grid-row-gap: 10rem;
+  grid-column-gap: 5rem;
   margin: 0;
   font-size: 1.5rem;
 }
@@ -1621,18 +1644,37 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 5rem;
 }
 
 .clasesflex-container--title {
   text-align: center;
   font-size: 2rem;
   text-transform: uppercase;
-  margin: 3rem 0;
+  margin: 3rem 0 5rem 0;
 }
 
 .clases--item {
+  background-color: var(--color-grey-light-6);
+  border: 3px;
+  margin: 0 auto;
+  width: 90%;
   text-decoration: none;
   list-style: none;
+  text-align: center;
+}
+
+.clases--item h4 {
+  margin: 0 auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.5rem;
+  width: 85%;
+}
+
+.clases--item li {
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
 }
 
 .campus__address-box {

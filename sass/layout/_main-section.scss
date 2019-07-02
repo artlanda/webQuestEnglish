@@ -174,9 +174,14 @@
 //?  CURSOS
 
 .clases-container {
+  /*@include respond(desktop) {
+    grid-column: center-start / center-end;
+  }*/
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  grid-gap: 6rem;
+
+  grid-row-gap: 10rem;
+  grid-column-gap: 5rem;
   margin: 0;
   font-size: 1.5rem;
 }
@@ -184,17 +189,40 @@
 .clasesflex-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 5rem;
   //justify-content: center;
   //align-items: center;
   &--title {
     text-align: center;
     font-size: 2rem;
     text-transform: uppercase;
-    margin: 3rem 0;
+    margin: 3rem 0 5rem 0;
   }
 }
 
 .clases--item {
+  //display: flex;
+  //flex-direction: column;
+  background-color: var(--color-grey-light-6);
+  border: 3px;
+  margin: 0 auto;
+  width: 90%;
   text-decoration: none;
   list-style: none;
+  text-align: center;
+  //align-items: flex-start;
+  //justify-content:
+
+  h4 {
+    //align-self: center;
+    //justify-self: center;
+    //text-align: center;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    width: 85%;
+  }
+  li {
+    transform: translateY(-40%);
+  }
 }
