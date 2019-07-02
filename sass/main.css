@@ -399,7 +399,7 @@ body {
     -ms-grid-rows: min-content min-content 30vh;
         grid-template-rows: -webkit-min-content -webkit-min-content 30vh;
         grid-template-rows: min-content min-content 30vh;
-        grid-template-areas: "topbar topbar topbar topbar topbar topbar topbar topbar" "...... main   main   main   main   info   info ......" "footer footer footer footer footer footer footer footer ";
+        grid-template-areas: "topbar topbar topbar topbar topbar topbar topbar topbar" "...... main   main   main   main   main   main ......" "footer footer footer footer footer footer footer footer ";
   }
   .escuelas-container .topbar {
     -ms-grid-row: 1;
@@ -408,15 +408,12 @@ body {
     grid-area: topbar;
   }
   .escuelas-container .info-section {
-    -ms-grid-row: 2;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 2;
     grid-area: info;
   }
   .escuelas-container .main-section {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 6;
     grid-area: main;
   }
   .escuelas-container .footer {
@@ -1430,15 +1427,21 @@ body {
 }
 
 .campus__map-box {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  height: 80vw;
+  justify-self: center;
+  height: 100%;
   width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .campus__map {
   width: 100%;
-  height: 100%;
+  height: 60vh;
   border: 0;
 }
 
@@ -1461,11 +1464,30 @@ body {
 
 @media only screen and (min-width: 62.5em) {
   .campus__map-box {
-    -ms-grid-column-align: center;
-        justify-self: center;
+    margin-bottom: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 45vw;
+    width: 80vw;
+  }
+  .campus__map {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     height: 40vw;
     width: 50vw;
-    margin-bottom: 4rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+    border: 0;
+  }
+  .campus__text-box {
+    width: 70%;
   }
 }
 
@@ -1720,6 +1742,9 @@ body {
 
 @media only screen and (min-width: 62.5em) {
   .campus__address-box {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1727,9 +1752,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
