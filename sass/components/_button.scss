@@ -128,6 +128,12 @@
       background-color: var(--color-primary);
     }
   }
+  &--inline {
+    text-align: center;
+    margin: 1rem auto;
+    display: inline-block;
+    width: 25rem;
+  }
 
   &::after {
     content: "";

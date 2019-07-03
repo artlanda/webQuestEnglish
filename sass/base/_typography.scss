@@ -54,6 +54,14 @@ body {
   letter-spacing: 0.2rem;
 }
 
+.heading-quaternary {
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
 @include respond(desktop) {
   .heading-secondary--animated {
     color: var(--color-primary-dark);
