@@ -553,10 +553,6 @@ body {
     width: 33.333333%;
     display: table-cell;
   }*/
-  /*&__img {
-    display: block;
-    width: 100%;
-  }*/
 }
 
 @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
@@ -594,6 +590,33 @@ body {
           flex-direction: column;
 }
 
+.popup__content-teacher {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-height: 100%;
+  width: 65%;
+  background-color: white;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%) scale(0.25);
+          transform: translate(-50%, -50%) scale(0.25);
+  -webkit-transition: all 0.5s 0.2s;
+  transition: all 0.5s 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .popup__text-box {
   display: -ms-grid;
   display: grid;
@@ -603,6 +626,31 @@ body {
 
 .popup__right {
   padding: 0.5rem 1rem;
+}
+
+.popup__img-teacher1 {
+  max-width: 30vw;
+  height: 30vw;
+  /*background-repeat: no-repeat;
+    background-size: contain;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-tertiary-light, 0.6),
+      rgba($color-tertiary-dark, 0.3)
+    );*/
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 62.5em) {
+  .popup__img-teacher1 {
+    max-width: 25vw;
+    height: 25vw;
+  }
+}
+
+.popup__img {
+  display: block;
+  width: 100%;
 }
 
 .popup__text {
@@ -622,6 +670,12 @@ body {
 }
 
 .popup:target .popup__content {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.popup:target .popup__content-teacher {
   opacity: 1;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
