@@ -1863,9 +1863,28 @@ body {
           transform: rotate(5deg) scale(1.3);
 }
 
-.clases--link {
-  text-decoration: none;
+.clases--item--link-2:link, .clases--item--link-2:visited {
+  font-size: 1.3rem;
   color: inherit;
+  background-color: var(--color-grey-light-6);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: 700;
+}
+
+.clases--item--link-2:link span, .clases--item--link-2:visited span {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.clases--item--link-2:hover, .clases--item--link-2:active {
+  -webkit-box-shadow: var(--shadow-dark);
+          box-shadow: var(--shadow-dark);
+  -webkit-transform: rotate(5deg) scale(1.3);
+          transform: rotate(5deg) scale(1.3);
 }
 
 .campus__address-box {
