@@ -213,6 +213,25 @@ body {
             transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
   }
+  .heading-quaternary--animated {
+    color: var(--color-primary-dark);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    display: inline-block;
+    background-image: -webkit-gradient(linear, left top, right top, from(#2c618b), to(#1b4568));
+    background-image: linear-gradient(to right, #2c618b, #1b4568);
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .heading-quaternary--animated:hover {
+    -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+            transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
 }
 
 *,
