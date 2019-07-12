@@ -7,6 +7,167 @@
     <link rel="stylesheet" href="sass/main.css" />
     <link rel="shortcut icon" type="image/png " href="img/logo_small.png" />
     <title>Cursos</title>
+<style type="text/css">
+#menu-bar {
+  width: 95%;
+  margin: 0px 0px 0px 0px;
+  padding: 6px 6px 4px 6px;
+  height: 3rem;
+  line-height: 100%;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  box-shadow: 2px 2px 3px #666666;
+  -webkit-box-shadow: 2px 2px 3px #666666;
+  -moz-box-shadow: 2px 2px 3px #666666;
+  background: #8b8b8b;
+  background: linear-gradient(top,  #a9a9a9,  #7a7a7a);
+  background: -ms-linear-gradient(top,  #a9a9a9,  #7a7a7a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#a9a9a9), to(#7a7a7a));
+  background: -moz-linear-gradient(top,  #a9a9a9,  #7a7a7a);
+  border: solid 1px #6d6d6d;
+  position:relative;
+  z-index:999;
+  justify-self: center;   <!-- -->
+
+
+}
+
+
+
+
+#menu-bar li {
+  margin: 0px 0px 6px 0px;
+  padding: 0px 6px 0px 6px;
+  float: left;
+  position: relative;
+  list-style: none;
+}
+#menu-bar a {
+  font-weight: bold;
+  font-family: arial;
+  font-style: normal;
+  font-size: 12px;
+  color: #e7e5e5;
+  text-decoration: none;
+  display: block;
+  padding: 6px 20px 6px 20px;
+  margin: 0;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  text-shadow: 2px 2px 3px #000000;
+}
+#menu-bar li ul li a {
+  margin: 0;
+}
+#menu-bar .active a, #menu-bar li:hover > a {
+  background: #0399d4;
+  background: linear-gradient(top,  #ebebeb,  #a1a1a1);
+  background: -ms-linear-gradient(top,  #ebebeb,  #a1a1a1);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#a1a1a1));
+  background: -moz-linear-gradient(top,  #ebebeb,  #a1a1a1);
+  color: #444444;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  text-shadow: 2px 2px 3px #ffffff;
+}
+#menu-bar ul li:hover a, #menu-bar li:hover li a {
+  background: none;
+  border: none;
+  color: #666;
+  -box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+#menu-bar ul a:hover {
+  background: #0399d4 !important;
+  background: linear-gradient(top,  #04acec,  #0186ba) !important;
+  background: -ms-linear-gradient(top,  #04acec,  #0186ba) !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba)) !important;
+  background: -moz-linear-gradient(top,  #04acec,  #0186ba) !important;
+  color: #ffffff !important;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  text-shadow: 2px 2px 3px #ffffff;
+}
+#menu-bar li:hover > ul {
+  display: block;
+}
+#menu-bar ul {
+  background: #dddddd;
+  background: linear-gradient(top,  #ffffff,  #cfcfcf);
+  background: -ms-linear-gradient(top,  #ffffff,  #cfcfcf);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#cfcfcf));
+  background: -moz-linear-gradient(top,  #ffffff,  #cfcfcf);
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 185px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  border: solid 1px #b4b4b4;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 3px #222222;
+  -moz-box-shadow: 2px 2px 3px #222222;
+  box-shadow: 2px 2px 3px #222222;
+}
+#menu-bar ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+  
+}
+#menu-bar ul a {
+  padding:10px 0px 10px 15px;
+  color:#424242 !important;
+  font-size:12px;
+  font-style:normal;
+  font-family:arial;
+  font-weight: normal;
+  text-shadow: 2px 2px 3px #ffffff;
+}
+#menu-bar ul li:first-child > a {
+  border-top-left-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+}
+#menu-bar ul li:last-child > a {
+  border-bottom-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+}
+#menu-bar:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#menu-bar {
+  display: inline-block;
+}
+  html[xmlns] #menu-bar {
+  display: block;
+}
+* html #menu-bar {
+  height: 1%;
+}
+</style>
+
   </head>
   <body>
     <div class="cursos-container">
@@ -29,6 +190,8 @@
         </div>
 
         <nav class="navigation__nav">
+
+          <!--
           <ul class="navigation__list">
             <li class="navigation__item">
               <a href="index.html" class="navigation__link">
@@ -51,7 +214,7 @@
                 <svg class="navigation__iconLink">
                   <use xlink:href="img/symbol-defs.svg#icon-headphones"></use>
                 </svg>
-                <span>Maestros-Mindshifters</span></a
+                <span>Mindshifters</span></a
               >
             </li>
 
@@ -62,7 +225,7 @@
                     xlink:href="img/symbol-defs.svg#icon-folder-download"
                   ></use>
                 </svg>
-                <span>Escuelas-Planteles</span></a
+                <span>Planteles</span></a
               >
             </li>
             <li class="navigation__item">
@@ -90,8 +253,63 @@
               >
             </li>
           </ul>
+                -->
+        
+                <ul id="menu-bar">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Servicios</a>
+                     <ul>
+                      <li><a href="#">Cursos de Inglés</a>
+                        <ul id="menu-bar2" style="
+                        top: 0%;
+                        position: absolute;
+                        left: 100%;
+                     
+                    ">
+                                                <li><a href="#">Curso de inglés para niños</a></li>
+                                                <li><a href="#">Curso de inglés: 6-12 young learner</a></li>
+                                                <li><a href="#">Curso de inglés: 13 young adults and adults</a></li>
+                    
+                                            </ul>
+                      </li>
+                      <li><a href="#">Cursos de Francés</a></li>
+                      <li><a href="#">Preparación para Certificaciones Internacionales</a></li>
+                      <li><a href="#">Curso para docentes</a></li>
+                      <li><a href="#">Aplicación de exámenes internacionales y Procesos de registro</a></li>
+                      <li><a href="#">Instancia Cenni de la SEP</a></li>
+                      <li><a href="#">Curso para empresas</a></li>
+                      <li><a href="#">Cursos a distancia</a></li>
+                      <li><a href="#">Coaching a colegios</a></li>
+                      <li><a href="#">Intercambios y Viajes al Extranjero</a></li>
+                     </ul>
+                    </li>
+                    <li><a href="#">Idiomas</a>
+                     <ul>
+                      <li><a href="#">Cursos de Inglés</a></li>
+                      <li><a href="#">Cursos de Francés</a></li>
+                     </ul>
+                    </li>
+                    <li><a href="#">Certificaciones</a>
+                      <ul>
+                       <li><a href="#">English Testing Services (ETS)</a></li>
+                       <li><a href="#">Interantional Institute of Education (IIE)</a></li>
+                       <li><a href="#">Cambrige University</a></li>
+                       <li><a href="#">Trinity College London</a></li>
+                      </ul>
+                     </li>
+                     <li><a href="#">Cursos</a>
+                      <ul>
+                       <li><a href="#">Curso para empresas</a></li>
+                       <li><a href="#">Cursos a distancia</a></li>
+                      </ul>
+                     </li>
+                     <li><a href="#">Coaching</a></li>
+                     <li><a href="#">Intercambios</a></li>
+                   </ul>
         </nav>
+       
       </section>
+
 
       <main class="main-section u-margin-top4movilnavbar">
         <section class="campus__text-box">
